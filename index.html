@@ -6,11 +6,23 @@
   <style>
     canvas { background: #000; display: block; margin: 0 auto; }
     body { text-align: center; color: white; font-family: sans-serif; }
+    .controls { margin-top: 10px; }
+    button {
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      margin: 10px;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
   <h1>Casse Brique</h1>
   <canvas id="gameCanvas" width="480" height="320"></canvas>
+  <div class="controls">
+    <button onclick="leftPressed = true; setTimeout(() => leftPressed = false, 100)">⬅️</button>
+    <button onclick="rightPressed = true; setTimeout(() => rightPressed = false, 100)">➡️</button>
+  </div>
   <script src="main.js"></script>
 </body>
 </html>
